@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prague Live</title>
+<meta name="apple-mobile-web-app-title" content="Prague Live">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<meta name="robots" content="noindex">
+<script>
+  // Home-screen shortcut for Prague Live: this page only carries the icon.
+  // Opened normally (as the shortcut does) it forwards at once. Opened with
+  // ?add it stays, and drops ?add from the address first -- the address the
+  // shortcut saves -- so the saved shortcut forwards.
+  var TARGET = "https://claude.ai/code/artifact/6de9b4cd-2189-42ba-a5f2-940241454571";
+  if (location.search.indexOf("add") === -1) {
+    location.replace(TARGET);
+  } else {
+    history.replaceState(null, "", location.pathname);
+  }
+</script>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#131511;color:#E8EAE3;
+       font:16px/1.5 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;text-align:center;padding:0 24px}
+  img{width:120px;height:120px;border-radius:27px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+  h1{font-size:22px;margin:22px 0 8px}
+  p{color:#9BA195;margin:0 0 6px}
+  a{color:#F2603C}
+</style>
+</head><body>
+<main>
+  <img src="apple-touch-icon.png" alt="">
+  <h1>Prague Live</h1>
+  <p>Tap <b>Share</b>, then <b>Add to Home Screen</b>.</p>
+  <p><a href="https://claude.ai/code/artifact/6de9b4cd-2189-42ba-a5f2-940241454571">Open Prague Live</a></p>
+</main>
+</body></html>
